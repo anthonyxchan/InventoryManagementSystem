@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFrame" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorymanagementsystem.ProductController">
+   <children>
+      <Label layoutX="263.0" layoutY="30.0" prefHeight="40.0" prefWidth="653.0" style="-fx-text-fill: black;" text="Product Inventory" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Ebrima Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="tableProduct" layoutX="270.0" layoutY="125.0" prefHeight="214.0" prefWidth="653.0">
+         <columns>
+            <TableColumn fx:id="itemNumberColumn" prefWidth="94.0" text="Item Number" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="182.0" text="Description" />
+            <TableColumn fx:id="vendorColumn" prefWidth="83.0" text="Vendor" />
+            <TableColumn fx:id="costColumn" prefWidth="129.0" text="Cost ($USD)" />
+            <TableColumn fx:id="inventoryColumn" prefWidth="69.0" text="Inventory" />
+            <TableColumn fx:id="totalValueColumn" prefWidth="95.0" text="Total Value" />
+         </columns>
+      </TableView>
+      <Label layoutX="270.0" layoutY="85.0" prefHeight="40.0" prefWidth="653.0" style="-fx-background-color: #008DCD;" text="Product Invnetory" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Ebrima Bold" size="20.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Button fx:id="addNewItems" layoutX="270.0" layoutY="543.0" mnemonicParsing="false" onAction="#loadAddNewItem" prefHeight="31.0" prefWidth="120.0" text="Add New Item">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchProduct_textfield" layoutX="766.0" layoutY="38.0" onKeyReleased="#searchProduct" prefHeight="25.0" prefWidth="157.0" promptText="Search Product" />
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="904.0" layoutY="54.0" />
+      <Button fx:id="deleteProduct" layoutX="823.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleDeleteProduct" prefHeight="31.0" prefWidth="100.0" text="Delete">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="270.0" layoutY="356.0">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="315.0">
+               <children>
+                  <Label alignment="CENTER" text="Item Number">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="item_number_textfield" alignment="CENTER" prefHeight="25.0" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="315.0" prefHeight="31.0" prefWidth="315.0">
+               <children>
+                  <Label alignment="CENTER" text="Description">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="desciption_textfield" alignment="CENTER" prefHeight="25.0" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="2.0" layoutY="47.0" prefHeight="31.0" prefWidth="315.0">
+               <children>
+                  <Label alignment="CENTER" text="Vendor">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="vendor_textfield" alignment="CENTER" prefHeight="25.0" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="322.0" layoutY="47.0" prefHeight="31.0" prefWidth="315.0">
+               <children>
+                  <Label alignment="CENTER" text="Cost">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="cost_textfield" alignment="CENTER" prefHeight="25.0" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="2.0" layoutY="94.0" prefHeight="31.0" prefWidth="315.0">
+               <children>
+                  <Label alignment="CENTER" text="Inventory">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="inventory_textfield" alignment="CENTER" prefHeight="25.0" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Label layoutX="824.0" layoutY="578.0" text="(Delete by entering item number)">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="600.0" prefWidth="185.0" styleClass="sidebar" stylesheets="@dashboard.css">
+         <children>
+            <Label prefHeight="68.0" prefWidth="185.0" style="-fx-background-color: #008DCD;" text="Products" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Ebrima Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="185.0" styleClass="btns" stylesheets="@dashboard.css">
+               <children>
+                  <FontAwesomeIconView glyphName="DASHBOARD" size="1.5em" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="68.0" prefWidth="356.0" styleClass="btns" text="Dashboard" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="185.0" styleClass="btns" stylesheets="@dashboard.css">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIconView glyphName="BOOK" size="1.5em" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToProduct" prefHeight="68.0" prefWidth="356.0" styleClass="btns" text="Products" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="185.0" styleClass="btns" stylesheets="@dashboard.css">
+               <children>
+                  <FontAwesomeIconView glyphName="MONEY" size="1.5em" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToSales" prefHeight="68.0" prefWidth="356.0" styleClass="btns" text="Sales" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

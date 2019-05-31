@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 1, 2019, 12:43:55 PM
+    Author     : antho
+*/
+
+*{
+    -fx-primary: #2A2E37;
+    -fx-secondary: #3B4E96;
+    -fx-primarytext: #B2B2B2;
+}
+
+
+.root{
+    -fx-background-color: -fx-primary;
+       
+}
+
+#login{
+        -fx-background-color: -fx-secondary;
+
+}
+
+#key{
+    color: black;
+}

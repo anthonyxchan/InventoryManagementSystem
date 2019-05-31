@@ -1,0 +1,45 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+*{
+    -fx-primary: #2A2E37;
+    -fx-secondary: #3B4E96;
+    -fx-primarytext: #B2B2B2;
+}
+
+
+.sidebar{
+   -fx-background-color: -fx-primary;   
+}
+
+.mainFrame{
+   -fx-background-color: #F0F0F0;  
+
+}
+
+.btns{
+    -fx-background-color: transparent;
+    -fx-text-fill: #808080;
+    -fx-font-family: Ebrima;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: left;
+}
+
+.btns:hover{
+    -fx-background-color: #3B4E96;
+}
+
+.glyph-icon{
+    -fx-fill: grey;
+}
+
+.summary{
+    -fx-background-color: white
+}
+
+.suummary_item{
+    -fx-background-color: #E6E6FA;
+}
+
